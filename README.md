@@ -1,5 +1,5 @@
 # hibernator_script
-a sh script to enable hibernation on manjaro
+a shell script to enable hibernation on manjaro
 
 # hibernator
 Script to automate hibenation setup on archlinux based systems like Manjaro and Others But tested on Manjaro.
