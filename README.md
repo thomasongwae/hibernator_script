@@ -2,7 +2,7 @@
 a sh script to enable hibernation on manjaro
 
 # hibernator
-Script to automate hibenation setup on archlinux based systems.
+Script to automate hibenation setup on archlinux based systems like Manjaro and Others But tested on Manjaro.
 
 Hibernator adds resume hook if needed, and provides installed bootloaders with necessary kernel parameters to resume from hibernation. It uses existing swap partition, but if there is none, it creates swapfile and uses that instead. 
 
