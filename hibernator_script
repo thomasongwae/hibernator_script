@@ -2,6 +2,7 @@
 # script to enable hibernation noninteractively, based on powerdown-functions
 shopt -s nullglob extglob
 
+#moved swapfile from root directory to /opt folder
 swapfilesize=${1-4G}
 hibernate_offset() {
     filefrag -v /opt/swapfile | awk 'NR==4 {print $4}' | tr -d .
@@ -26,7 +27,7 @@ has_swap_part () {
 can_suspend_to_disk () {
     [[ -f /opt/swapfile ]] || has_swap_part
 }
-
+#moved swapfile from root directory to /opt folder
 has_swap () {
     [[ -f /opt/swapfile ]] || has_swap_part
 }
@@ -53,7 +54,7 @@ fi
 has_resume_hook () {
     grep -qs -e resume -e systemd /etc/mkinitcpio.conf
 }
-
+#moved swapfile from root directory to /opt folder
 resume_boot_option() {
     if [[ -f /opt/swapfile ]]; then
         echo "resume=$(root_part) resume_offset=$(hibernate_offset)"
